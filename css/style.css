@@ -28,8 +28,15 @@
     --first-color: #0084FD;
     --second-color: #B5DDFF;
     --thrid-color:#9792E4;
-    --fourth-color:
+    /* --fourth-color: */
+
 }
+
+/*   Font Layout   */
+    /* --first-font:
+    --second-font:
+    --third-font: */
+
 
 
  /************************************************
@@ -37,24 +44,19 @@
   ************************************************/
  
  /* LAYOUT */
+ 
  .container {
-    max-width: 75rem;
+    max-width: 1200px;
     margin: 0 auto;
+    padding:20px;
  }
  
- /*.row {
-     display: ;
- }
- 
- .col {
-     padding-left: ;
-     padding-right:;
- }*/
  
 /* TEXT */
- .text-center {
+
+ /* .text-center {
      text-align:center;
- }
+ } */
 
 /************************************************
      SITE SECTIONS
@@ -68,7 +70,7 @@ header nav{
  header{
     width: 100%;
     background-color:var(--first-color);
-    padding: 1.25rem 1.25rem;
+    padding: 20px 20px;
     text-decoration: none;
  }
 
@@ -82,7 +84,7 @@ header nav{
  a , 
  button {
     font-weight: 300;
-    font-size: .875rem;
+    font-size: 14px;
     color: white;
 
  }
@@ -95,11 +97,11 @@ header nav{
 
 
  .menu li{
-    padding: 0rem 1.25rem;
+    padding: 0px 20px;
  }
 
  .logo{
-    width:6.25rem;
+    width:100px;
  }
 
  .menu li a {
@@ -110,27 +112,78 @@ header nav{
     color: #3ef;  
  }
 
- button{
-    padding: .5625rem 1.5625rem;
+header nav button{
+    padding: 9px 25px;
     background-color: white;
     color: black;
     border: none;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     cursor: pointer;
     transition: all 3s ease;
  }
 
- button:hover{
+header nav button:hover{
     background:rgb(90, 209, 224) ;
+ }
+
+ header .font-awesome{
+    color: white;
+    font-size: 20px;
  }
 
 
 /* MAIN TOP SECTION */
 
 .main-top{
-    height: 200px;
+    height: 12.5rem;
 }
- 
+
+main .cards{
+  
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+main .card{
+    width:calc(100% / 3 );
+    background-color:var(--second-color);
+    border-radius:40px;
+    margin: 1.25rem;
+}
+
+main .card:first-child{
+
+    width:calc((100% / 3 ) * 2  - 5.00rem);
+}
+
+main .card img{
+    max-width: 12.5rem ;
+}
+
+main h4{
+    color:var(--first-color);
+}
+.main-top div button{
+    padding: .5625rem 2.8125rem;
+    background-color:var(--first-color);
+    color: white;
+    border: none;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 3s ease;
+    font-size: small;
+    letter-spacing: 2px;
+ }
+
+.main-top div button:hover{
+    background:rgb(90, 209, 224) ;
+ }
+
+ button .fa-brands{
+    padding-right: 5px;
+ }
+
 
  /************************************************
      SOLUZIONE RESPONSIVE
@@ -139,9 +192,11 @@ header nav{
 /* Media Query Mobile First : Caso Base Mobile */
  
 
-/* Small Device Mobile da 0 a 767px*/
+/* Small Device Mobile da 0 a 47.9375rem*/
 
-@media screen and (min-width: 0px){
+@media screen and (min-width: 0rem){
+
+        /* HEADER */
 
         .container{
             width: 100%;  
@@ -152,13 +207,20 @@ header nav{
             display: none; 
          }
 
+         header .font-awesome{
+            display: block;
+        
+        }
+
     
 
 } 
 
 /* Medium Device Tablet da 768 a 991*/
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 48rem){
+
+    /* HEADER */
 
     .container{
         width: 100%;  
@@ -168,19 +230,27 @@ header nav{
     header button{
        display: none; 
     }
-    
+
+    header .font-awesome{
+
+        display: block;
+
+    }
 } 
+
  
 
-/* Large Device Desktop da 992*/
+/* Large Device Desktop da 992 in poi*/
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 62rem){
     
+    /* HEADER */
+
     header .menu , header button{
         display: flex; 
      }
 
-    header .menu .font-awesome{
+    header .font-awesome{
         display: none;
     }
  
@@ -192,6 +262,6 @@ header nav{
  *************************************************/
 
 .debug{
-     border:2px dashed black;
+     border:.125rem dashed black;
 }
 
