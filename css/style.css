@@ -67,6 +67,14 @@ header nav{
     display: flex;
 }
 
+header .menu , header button{
+    display: flex; 
+ }
+
+header .font-awesome{
+    display: none;
+}
+
  header{
     width: 100%;
     background-color:var(--first-color);
@@ -231,21 +239,28 @@ div .card .small {
     height: 50rem;
 }
 
-.card .left p{
-    margin:20px 10px;
+
+main .card-planning1 , main .card-planning{
+
+    width: calc(100% / 2);
+    height: 18.75rem;
+
 }
 
-
-
-/* DA SISTEMARE */ 
-header .menu , header button{
-    display: flex; 
- }
-
-header .font-awesome{
-    display: none;
+.card-planning > img {
+    width: 100%;
 }
 
+.card-planning > h2{
+    color: black;
+}
+
+main .card-planning{
+    border-radius: 1.25rem;
+    background-color: white;
+    padding-top: 1.875rem;
+    height: 43.75rem;
+}
 
  /************************************************
      SOLUZIONE RESPONSIVE
