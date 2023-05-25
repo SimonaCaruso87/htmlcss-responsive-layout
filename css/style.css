@@ -249,6 +249,7 @@ main .card-planning1 , main .card-planning{
 
 .card-planning > img {
     width: 100%;
+    margin:0 auto;
 }
 
 .card-planning > h2{
